@@ -1,0 +1,140 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(55, 55, 55);
+}
+header{
+    background-color: rgb(15, 13, 13);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 12vh;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+
+header:hover
+{
+    background-color: rgb(1, 48, 1);
+    color: rgb(210, 210, 210);
+}
+
+#wrapper
+{
+    height: 100vh;
+}
+
+.allimages
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.allimages img
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+.images
+{
+    position: relative;
+    width: 45%;
+    height: 50vh;
+    margin: 2rem;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.images img
+{
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+
+
+.images:hover img
+{
+    transform: scale(1.2);
+}
+
+
+.images:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    transition-property: transform;
+    /* transition-duration: 0.5s; */
+    z-index: 1;
+}
+
+
+.images:hover:before
+{
+    top: 0;
+    left: -45rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(251, 251, 251, 0.549);
+    transform: translateX(45rem);   
+}
+
+
+.images .icon
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: -27rem;
+  transition-property: left;
+  transition-duration: 0.5s;
+  transition-delay: 0.3s;
+  z-index: 1;
+}
+
+
+.icon a{
+    color: black;
+    font-size: 4rem;
+    margin: 2rem; 
+    transition-property: transform;
+    transition-duration: 0.3s;
+    
+    
+}
+
+
+.images:hover .icon{
+    left: 0;
+}
+
+
+.icon a:hover{
+    transform: rotate(360deg);
+}
+
+
+
